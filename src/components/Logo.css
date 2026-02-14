@@ -1,0 +1,21 @@
+.site-logo {
+  display: inline-block;
+  transition: transform 240ms ease, filter 240ms ease, box-shadow 240ms ease;
+  will-change: transform, filter, box-shadow;
+  cursor: pointer;
+}
+
+.site-logo:hover {
+  transform: translateY(-6px) scale(1.04);
+  filter: drop-shadow(0 0 18px rgba(100,108,255,0.6));
+  box-shadow: 0 6px 24px rgba(100,108,255,0.08);
+}
+
+.site-logo:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+/* small helper to allow the glow to be visible on dark/light backgrounds */
+.site-logo.glow-strong:hover {
+  filter: drop-shadow(0 0 28px rgba(146,113,204,0.85));
+}

@@ -1,0 +1,10 @@
+:root {
+  --max-width: 1280px;
+  --spacing: 1rem;
+
+  --primary: #9271cc; /* main brand */
+  --accent: #646cff;  /* interactive */
+  --bg-dim: rgba(146, 113, 204, 0.05);
+  --muted: #b8b8b8;
+  --card-radius: 12px;
+}

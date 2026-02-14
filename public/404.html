@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="icon" href="/lithium.svg">
+  <style>
+    /* General 404 Page Styles */
+    body {
+      background: #18181b;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 5rem 0;
+      margin: 0;
+    }
+
+    #root {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .logo {
+      height: 6em;
+      padding: 1.5em;
+      will-change: filter;
+      transition: filter 300ms;
+    }
+
+    .logo:hover {
+      filter: drop-shadow(0 0 2em #9271ccaa);
+    }
+
+    .float {
+      animation: float-idle 3s ease-in-out infinite;
+      animation-play-state: paused;
+      animation-direction: alternate;
+    }
+
+    .float:hover {
+      animation-play-state: running;
+    }
+
+    @keyframes float-idle {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-25px);
+      }
+    }
+
+    h1 {
+      color: #9271cc;
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 1.25rem;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .nav-tab {
+      background: transparent;
+      border: 2px solid #9271cc;
+      color: #9271cc;
+      padding: 0.6em 1.2em;
+      font-size: 1em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+      border-radius: 8px;
+    }
+
+    .nav-tab:hover {
+      border-color: #646cff;
+      color: #646cff;
+    }
+
+    .nav-tab.active {
+      background-color: #9271cc;
+      color: white;
+    }
+
+    .nav-tab.active:hover {
+      background-color: #646cff;
+      border-color: #646cff;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <img src="/lithium.svg" alt="Lithium Labs Logo" class="logo float"/>
+    <h1>Oops! Page Not Found</h1>
+    <p>Sorry, the page you were looking for doesn't exist.</p>
+    
+    <div class="nav-tabs">
+      <a href="/" class="nav-tab">Go to Home</a>
+    </div>
+  </div>
+</body>
+</html>
