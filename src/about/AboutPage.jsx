@@ -1,4 +1,4 @@
-import "../App.css";
+import "../App.scss";
 import "../transitions.css";
 import Logo from "../components/Logo";
 import { useTranslation } from "react-i18next";

@@ -1,4 +1,4 @@
-import './Products.css';
+import './Products.scss';
 import '../transitions.css';
 import React from 'react';
 import { useParams } from 'react-router-dom';

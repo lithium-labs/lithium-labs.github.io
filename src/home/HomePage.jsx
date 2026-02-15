@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.scss';
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Logo from '../components/Logo';

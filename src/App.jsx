@@ -6,6 +6,7 @@ import AboutPage from './about/AboutPage';
 import './transitions.css';
 import Header from './components/Header';
 import './components/Header.css';
+import DonatePage from './donate/DonatePage';
 
 function App() {
   const location = useLocation();
@@ -55,6 +56,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/donate" element={<DonatePage />} />
             <Route path="/products/:productId" element={<ProductPage />} />
           </Routes>
         </div>
