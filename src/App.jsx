@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, useRoutes } from 'react-router-dom';
 import HomePage from './home/HomePage';
 import ProductPage from './products/ProductPage';
 import AboutPage from './about/AboutPage';
@@ -7,9 +7,11 @@ import './transitions.css';
 import Header from './components/Header';
 import './components/Header.css';
 import DonatePage from './donate/DonatePage';
+import { routes } from "./routes";
 
 function App() {
   const location = useLocation();
+  const element = useRoutes(routes);
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransitionStage] = useState('flipIn');
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -53,12 +55,7 @@ function App() {
       <div className="main-container">
         <Header />
         <div className={`transition-container ${reduceMotion ? '' : transitionStage}`} onAnimationEnd={handleAnimationEnd}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/donate" element={<DonatePage />} />
-            <Route path="/products/:productId" element={<ProductPage />} />
-          </Routes>
+          {element}
         </div>
       </div>
       

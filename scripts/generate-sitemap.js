@@ -9,6 +9,7 @@ async function generate() {
 
     sitemap.write({ url: '/', priority: 1.0 });
     sitemap.write({ url: '/about', priority: 0.8 });
+    sitemap.write({ url: '/donate', priority: 0.9 });
 
     const products = ["nil", "doomsday"];
 
