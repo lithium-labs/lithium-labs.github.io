@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lithium-labs.github.io/sitemap.xml
