@@ -15,8 +15,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import './styles/variables.css';
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -32,6 +30,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  white-space: pre-line;
 }
 
 h1 {

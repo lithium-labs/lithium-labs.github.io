@@ -23,14 +23,14 @@ const ProductPage = () => {
   return (
     <div className="product-page">
       <div className="main-content">
-        <Logo size={72} />
+        <Logo size={72} className='float' />
         <h1>{product.name}</h1>
 
         <div className="description markdown-body" dangerouslySetInnerHTML={{ __html: renderMarkdown(product.markdown || product.description) }} />
 
         <div className="get-section">
           {(product.buttons || []).map((b, i) => (
-            <a key={i} href={b.link} className="status-badge clickable" target={b.target || '_self'} rel="noreferrer noopener">
+            <a key={i} href={b.link} className="status-badge clickable" target={b.target || '_self'} rel="noreferrer noopener" style={{ "--color": product.statusColor, "--text": product.buttonColor }}>
               {b.label}
             </a>
           ))}

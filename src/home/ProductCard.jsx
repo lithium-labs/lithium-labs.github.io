@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({ id, name, description, status }) => (
-  <div className="product-card">
+const ProductCard = ({ id, name, description, status, color, statusColor, buttonColor }) => (
+  <div className="product-card" style={{ "--color": color }}>
     <h3>{name}</h3>
     <p>{description}</p>
-    {status === 'Get' ? (
-      <Link to={`/products/${id}`} className="status-badge clickable">
+    {status.startsWith("G") ? (
+      <Link to={`/products/${id}`} className="status-badge clickable" style={{ "--color": statusColor, "--text": buttonColor }}>
         {status}
       </Link>
     ) : (

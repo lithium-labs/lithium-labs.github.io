@@ -1,21 +1,19 @@
-import '../App.css';
-import '../transitions.css';
-import Logo from '../components/Logo';
+import "../App.css";
+import "../transitions.css";
+import Logo from "../components/Logo";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
-    return (
-        <div>
-            <Logo size={48} className="float" />
-            <h1>Lithium Labs</h1>
+  const { t } = useTranslation();
 
-            <p style={{ marginTop: '20px' }}>
-                Lithium Labs is a personal company-like thing of mine where I make apps and
-                websites for fun.<br/><br/>
-                
-                🇹🇷
-            </p>
-        </div>
-    );
+  return (
+    <div>
+      <Logo size={48} className="float" />
+      <h1>Lithium Labs</h1>
+
+      <p style={{ marginTop: "20px" }}>{t("description")}</p>
+    </div>
+  );
 };
 
 export default HomePage;

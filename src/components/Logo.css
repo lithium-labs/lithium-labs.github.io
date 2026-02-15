@@ -3,6 +3,7 @@
   transition: transform 240ms ease, filter 240ms ease, box-shadow 240ms ease;
   will-change: transform, filter, box-shadow;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .site-logo:hover {
